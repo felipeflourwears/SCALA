@@ -1,0 +1,63 @@
+﻿!ScalaScript1107
+// Saved by Scala Designer Release 12.60.00 at 2022-10-25 18:46:23
+:"condicionales_simples.sca"
+{
+  Group:
+    String(mi_texto(""));
+    Integer(mi_entero);
+    Boolean(mi_booleano(Off));
+    String(genero);
+    Boolean(production);
+    BackgroundSettings(Size(1920, 1080));
+  Sequence:
+    production = On;
+    mi_texto = "Hola";
+    mi_entero = 42;
+    mi_booleano = On;
+    genero = "chico";
+    :"mostrar_una_de_las_opcions"
+    {
+    }
+    :"mostrar_si_es_chico"
+    {
+      Group:
+        Display(Wipe("Hexagon", Duration(1000), Direction(0), Acceleration(1, 1), Wait(Off)), Backdrop(Pen(7)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)));
+        Rect(1375, -34, 419, 1382, If(production=off), Layer(7), AntiAlias(On), OnReplay(Replace), Thickness(2), Area(On, Pen(1)));
+        If(genero="chico"or production=off);
+        HardDuration(5000);
+        If(genero="chico" or production=off);
+      Sequence:
+        {
+          Group:
+            TextBox(109, -197, 1236, 728, "Bienvenido!", Wipe("Straight", Duration(1000), Direction(0), Acceleration(1, 1), Wait(Off)), Shadow(Off, Softness(5)), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Lato Black (Western [900])", 264), AdjustFontSize(On, MinSize(25)), Justify(Right, Middle), Tabs(Relative(On)));
+            HardDuration(1000);
+        }
+    }
+    :"mostrar_si_es_chica"
+    {
+      Group:
+        Display(Wipe("Hexagon", Duration(1000), Direction(0), Acceleration(1, 1), Wait(Off)), Backdrop(Pen(15)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)));
+        HardDuration(5000);
+        If(genero="chica"or production=off);
+    }
+    :"mostar_si_hay_dudas"
+    {
+      Group:
+        Display(Wipe("Hexagon", Duration(1000), Direction(0), Acceleration(1, 1), Wait(Off)), Backdrop(Pen(8)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)));
+        HardDuration(5000);
+        If(genero="dudoso"or production=off);
+    }
+    :"bypass"
+    Goto("end");
+    {
+      Group:
+        Display(Backdrop(Pen(4)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)), Thumbnail(On));
+        Text(484, 160, "!mi_entero", Shadow(Off, Softness(5)), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Lato Black (Western [900])", 219), Tabs(Relative(On)), Wrap(On, Width(1890)));
+        Text(484, 424, "!mi_texto", Shadow(Off, Softness(5)), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Lato Black (Western [900])", 219), Tabs(Relative(On)), Wrap(On, Width(1890)));
+        Text(484, 708, "!mi_booleano", Shadow(Off, Softness(5)), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Lato Black (Western [900])", 219), Tabs(Relative(On)), Wrap(On, Width(1890)));
+        Wait();
+    }
+    :"end"
+    {
+    }
+}

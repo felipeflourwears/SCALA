@@ -1,0 +1,29 @@
+﻿!ScalaScript1107
+// Saved by Scala Designer Release 12.60.00 at 2022-10-26 16:06:49
+:"OnNotification_siempre_use.sca"
+{
+  Group:
+    BackgroundSettings(Size(768, 1024));
+  Sequence:
+    {
+      Sequence:
+        {
+          Group:
+            Display(Backdrop(Pen(2)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)), Thumbnail(On));
+            Clip(-288, -180, "Slices\OnNotification_meme_1.png", Align(Center, Middle), OnReplay(Replace), Operation(On, ChromaKey($0, Delta(2), Feather(0))));
+            Wait();
+        }
+        {
+          Group:
+            Display(Backdrop(Pen(2)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)), Thumbnail(On));
+            Clip(-288, -180, "Slices\OnNotification_meme_2.png", Align(Center, Middle), OnReplay(Replace), Operation(On, ChromaKey($0, Delta(2), Feather(0))));
+            Wait();
+        }
+        {
+          Group:
+            Display(Backdrop(Pen(2)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)));
+            Clip(-288, -180, "Slices\OnNotification_meme_3.png", Align(Center, Middle), OnReplay(Replace), Operation(On, ChromaKey($0, Delta(2), Feather(0))));
+            Wait();
+        }
+    }
+}

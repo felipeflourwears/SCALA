@@ -1,0 +1,22 @@
+﻿!ScalaScript1107
+// Saved by Scala Designer Release 12.60.00 at 2022-10-25 17:30:06
+:"mi_primer_script.sca"
+{
+  Group:
+    BackgroundSettings(Size(1920, 1080));
+  Sequence:
+    :"se abre guay"
+    {
+      Group:
+        Display(Wipe("CubeReceding", Duration(1000), Direction(0), Acceleration(1, 1), Wait(Off)), Backdrop(Pen(4)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)), Thumbnail(On));
+        Clip(313, 175, "Imagenes\Koala.jpg", Transparent(Off), OnReplay(Replace), Operation(On));
+        HardDuration(4000);
+    }
+    :"no vs el koala"
+    {
+      Group:
+        Display(Wipe("CubeReceding", Duration(1000), Direction(0), Acceleration(1, 1), Wait(Off)), Backdrop(Pen(4)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)));
+        Clip(148, 129, "C:\Users\Public\Pictures\Sample Pictures\Koala.jpg", Transparent(Off), OnReplay(Replace), Operation(On));
+        HardDuration(4000);
+    }
+}

@@ -1,0 +1,18 @@
+﻿!ScalaScript1107
+// Saved by Diseñador Scala Versión 12.70.00 at 2023-03-29 11:35:45
+:"pruebalf.sca"
+{
+  Group:
+    Template String(nombreuser("Luis Felipe"));
+    Template FileNameString(imagefondo("C:\Users\felip\Downloads\Imagenes\botonCoca1.png"));
+    Template String(nombrecliente("Luis Felipe"));
+    BackgroundSettings(Size(1920, 1080));
+    Config.RecentPublishLocations(PublishLocation("C Users Public Documents Scala Network Transmission Publish Locations Default", "Pruebalf"));
+  Sequence:
+    {
+      Group:
+        Picture(imagefondo, Backdrop(Pen(20)), Margin(10, 10, 0, 0), UserPalette(RGBPen(20, $e30812), RGBPen(1, $7ad7e9, $ffffff, $ffee00, $0, $999999, $bbbbbb, $777777, $dddddd, $555555), RGBPen(18, $969696), RGBPen(19, $c8c8c8), RGBPen(11, $ffff7f), RGBPen(10, $ff9c00), RGBPen(17, $646464)), AutoScale(FillAndTrim), Thumbnail(On), Operation(On));
+        Text(484, 52, nombreuser, Backdrop(Off, Pen(5)), Outline(Off, Pen(4)), Shadow(Off, Softness(5), Pen(4)), Bevel(Off, Base(Pen(5)), Left(Pen(6)), Right(Pen(7)), Top(Pen(8)), Bottom(Pen(9))), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Bitstream Vera Sans (Western [])", 50), UseCharHeight(On), Kerning(None), Tabs(Relative(On)), Wrap(On, Width(1165)));
+        Text(960, 76, nombrecliente, Backdrop(Off, Pen(5)), Outline(Off, Pen(4)), Shadow(Off, Softness(5), Pen(4)), Bevel(Off, Base(Pen(5)), Left(Pen(6)), Right(Pen(7)), Top(Pen(8)), Bottom(Pen(9))), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Bitstream Vera Sans (Western [])", 50), UseCharHeight(On), Kerning(None), Tabs(Relative(On)), Wrap(On, Width(681)));
+    }
+}

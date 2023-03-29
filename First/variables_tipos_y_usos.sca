@@ -1,0 +1,10 @@
+﻿!ScalaScript1107
+// Saved by Scala Designer Release 12.60.00 at 2022-10-25 17:58:57
+:"variables_tipos_y_usos.sca"
+{
+  Group:
+    String(mi_texto(""));
+    Integer(mi_entero);
+    Boolean(mi_booleano(Off));
+    BackgroundSettings(Size(1920, 1080));
+}

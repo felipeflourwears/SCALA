@@ -1,0 +1,31 @@
+﻿!ScalaScript1107
+// Saved by Scala Designer Release 12.60.00 at 2022-10-25 17:30:28
+:"ejemplo_scripts_anidados.sca"
+{
+  Group:
+    String(titulo("TITLE"));
+    BackgroundSettings(Size(1920, 1080));
+  Sequence:
+    titulo = "Hola";
+    {
+      Group:
+        Picture("Slices\shutterstock_531125116_1920.jpg", Wipe("FlyFade", Duration(1000), Direction(0), Acceleration(1, 1), Wait(Off)), Backdrop(Pen(4)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)), AutoScale(FillAndTrim), Thumbnail(On), Operation(On));
+        HardDuration(5000);
+      Sequence:
+        {
+          Group:
+            TextBox(116, 126, 561, 494, titulo, Wipe("Straight", Duration(1000), Direction(270), Acceleration(1, 1), Wait(Off)), Layer(2), Shadow(Off, Softness(5)), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Lato Black (Western [900])", 177), AdjustFontSize(On, MinSize(25)), Tabs(Relative(On)), Append("^n"), Append("Cuerpo de la noticia", Font("Lato Black (Western [900])", 96)));
+            HardDuration(0);
+        }
+        {
+          Group:
+            Rect(0, 0, 1920, 1080, Wipe("Straight", Duration(1000), Direction(270), Acceleration(1, 1), Wait(Off)), Layer(1), AntiAlias(On), OnReplay(Replace), Thickness(2), Area(On, Pen(1), AlphaGradient(1, 0, Direction(90))));
+            HardDuration(0);
+        }
+    }
+    {
+      Sequence:
+        :"mi_primer_script.sca"
+        Script("mi_primer_script.sca");
+    }
+}

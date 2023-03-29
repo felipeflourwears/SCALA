@@ -1,0 +1,80 @@
+﻿!ScalaScript1107
+// Saved by Scala Designer Release 12.60.00 at 2022-10-25 18:54:40
+:"local_binding.sca"
+{
+  Group:
+    String(mi_texto(""));
+    Integer(mi_entero);
+    Boolean(mi_booleano(Off));
+    String(genero);
+    Boolean(production);
+    FileNameString(foto_a_mostrar("Slices\shutterstock_772424488_1920.jpg"), fotos[10]("", "Slices\shutterstock_399933109_1920.jpg", "Slices\shutterstock_519894901_1920.jpg", "Slices\shutterstock_531125116_1920.jpg"));
+    BackgroundSettings(Size(1920, 1080));
+  Sequence:
+    production = On;
+    mi_texto = "Hola";
+    mi_entero = 42;
+    mi_booleano = On;
+    genero = "chica";
+    :"mostrar_una_de_las_opcions"
+    {
+    }
+    {
+      Group:
+        foto_a_mostrar = fotos[1];
+        If(genero="chico");
+    }
+    {
+      Group:
+        foto_a_mostrar = fotos[2];
+        If(genero="chica");
+    }
+    {
+      Group:
+        foto_a_mostrar = fotos[3];
+        If(genero="dudoso");
+    }
+    :"mostrar_si_es_chico"
+    {
+      Group:
+        Display(Wipe("Hexagon", Duration(1000), Direction(0), Acceleration(1, 1), Wait(Off)), Backdrop(Pen(7)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)));
+        Rect(1375, -34, 419, 1382, If(production=off), Layer(7), AntiAlias(On), OnReplay(Replace), Thickness(2), Area(On, Pen(1)));
+        Clip(201, 250, foto_a_mostrar, Layer(7), Transparent(Off), OnReplay(Replace), AutoScale(FillAndTrim), Operation(On, Resize(982, 655)));
+        HardDuration(5000);
+    }
+    :"bypass"
+    Goto("end");
+    {
+      Group:
+        Display(Backdrop(Pen(4)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)), Thumbnail(On));
+        Text(484, 160, "!mi_entero", Shadow(Off, Softness(5)), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Lato Black (Western [900])", 219), Tabs(Relative(On)), Wrap(On, Width(1890)));
+        Text(484, 424, "!mi_texto", Shadow(Off, Softness(5)), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Lato Black (Western [900])", 219), Tabs(Relative(On)), Wrap(On, Width(1890)));
+        Text(484, 708, "!mi_booleano", Shadow(Off, Softness(5)), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Lato Black (Western [900])", 219), Tabs(Relative(On)), Wrap(On, Width(1890)));
+        Wait();
+    }
+    {
+      Group:
+        Display(Backdrop(Pen(4)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)));
+        Text(56, 31, "ASSETS", Shadow(Off, Softness(5)), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Lato Black (Western [900])", 101), Tabs(Relative(On)), Wrap(On, Width(1890)));
+        Clip(279, 187, fotos[1], Transparent(Off), OnReplay(Replace), AutoScale(FitInside), Operation(On, Resize(612, 409)));
+        Clip(1017, 197, fotos[2], Transparent(Off), OnReplay(Replace), AutoScale(FitInside), Operation(On, Resize(612, 409)));
+        Clip(1011, 644, fotos[3], Transparent(Off), OnReplay(Replace), AutoScale(FitInside), Operation(On, Resize(612, 409)));
+    }
+    :"mostrar_si_es_chica"
+    {
+      Group:
+        Display(Wipe("Hexagon", Duration(1000), Direction(0), Acceleration(1, 1), Wait(Off)), Backdrop(Pen(15)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)));
+        HardDuration(5000);
+        If(genero="chica"or production=off);
+    }
+    :"mostar_si_hay_dudas"
+    {
+      Group:
+        Display(Wipe("Hexagon", Duration(1000), Direction(0), Acceleration(1, 1), Wait(Off)), Backdrop(Pen(8)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)));
+        HardDuration(5000);
+        If(genero="dudoso"or production=off);
+    }
+    :"end"
+    {
+    }
+}

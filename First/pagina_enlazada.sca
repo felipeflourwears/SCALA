@@ -1,0 +1,66 @@
+﻿!ScalaScript1107
+// Saved by Scala Designer Release 12.60.00 at 2022-10-26 18:38:22
+:"pagina_enlazada.sca"
+{
+  Group:
+    String(mi_texto(""));
+    Integer(mi_entero);
+    Boolean(mi_booleano(Off));
+    String(genero);
+    Boolean(production);
+    FileNameString(foto_a_mostrar("Slices\shutterstock_772424488_1920.jpg"), fotos[10]("", "Slices\shutterstock_399933109_1920.jpg", "Slices\shutterstock_519894901_1920.jpg", "Slices\shutterstock_531125116_1920.jpg"));
+    Integer(eleccion);
+    External FileNameString(videos[10]("", "Videos\chairs_2021_1920.mov", "Videos\Global Communications_1080p.mov", "Videos\Powder - Vibrant Fashion_1080p.mov"));
+    FileNameString(video_a_mostar("Videos\red_4_longer_loop.mp4"));
+    External Integer(Channel.tag1);
+    External String(Playback.frame);
+    Template ResourceNameString(po_tu_playlist_aqui("po_tu_playlist_aqui_page"));
+    BackgroundSettings(Size(1920, 1080));
+    OnNotification(eleccion, Use("IRQ_seleccion"));
+    Hotkey("1", Use("Hotkey_1"));
+    Hotkey("2", Use("Hotkey_2"));
+    Hotkey("3", Use("Hotkey_3"));
+    Config.RecentPublishLocations(PublishLocation("Design CM", "Pagina_enlazada"));
+  Sequence:
+    production = On;
+    Input(Mouse(On), TouchScreen(Off), Keyboard(On), MouseControls(Off), KeyboardControls(On), PointerSelectionOnly(On), UsePointerBlanking(Off));
+    UseExpr(po_tu_playlist_aqui);
+    Goto("end");
+    :"a_mostrar_una_de_las_opciones"
+    {
+    }
+    foto_a_mostrar = fotos[eleccion];
+    video_a_mostar = videos[eleccion];
+    :"bypass"
+    Goto("end");
+    eleccion = 0;
+    :"IRQ_seleccion"
+    {
+      Sequence:
+        Goto("a_mostrar_una_de_las_opciones");
+    }
+    :"Hotkey_1"
+    {
+      Sequence:
+        eleccion = 1;
+    }
+    :"Hotkey_2"
+    {
+      Sequence:
+        eleccion = 2;
+    }
+    :"Hotkey_3"
+    {
+      Sequence:
+        eleccion = 3;
+    }
+    :"end"
+    {
+    }
+  Resources:
+    :"po_tu_playlist_aqui_page"
+    {
+      Group:
+        Display(Backdrop(Pen(4)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)), Thumbnail(On));
+    }
+}
