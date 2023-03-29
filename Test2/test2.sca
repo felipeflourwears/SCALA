@@ -1,0 +1,15 @@
+﻿!ScalaScript1107
+// Saved by Diseñador Scala Versión 12.70.00 at 2023-03-29 13:03:10
+:"test2.sca"
+{
+  Group:
+    BackgroundSettings(Size(1920, 1080));
+  Sequence:
+    {
+      Group:
+        :"_TempName1"
+        Display(Backdrop(Pen(20)), Margin(10, 10, 0, 0), UserPalette(RGBPen(1, $0, $ffffff, $999999, $555555, $712068, $df449c, $dc110e, $662200, $ff5a00, $ff9c00, $ffee00, $8800, $dd00, $cccc, $66ff, $aa, $777777, $bbbbbb, $dddddd, $465a96)), Thumbnail(On));
+        :"_TempName2"
+        Text(352, 384, "Hola qué tal?", Shadow(Off, Softness(5)), AntiAlias(On), OnReplay(Replace), Under(Off, Thickness(3)), Font("Algerian (Western [])", 182), UseCharHeight(On), Bold(On), Kerning(None), Justify(Center, Top), Tabs(Relative(On)), Wrap(On, Width(1890)));
+    }
+}
